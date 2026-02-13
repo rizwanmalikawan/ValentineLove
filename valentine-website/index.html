@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>For My Love ❤️</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+    overflow-x: hidden;
+    color: white;
+    text-align: center;
+}
+
+/* Password Screen */
+#passwordScreen {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #ff7eb3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 999;
+}
+
+input {
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    margin-top: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background: white;
+    color: #ff4e50;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+section {
+    padding: 80px 20px;
+}
+
+/* Floating Hearts */
+.heart {
+    position: fixed;
+    bottom: -50px;
+    font-size: 20px;
+    animation: floatUp 8s linear infinite;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh);
+        opacity: 0;
+    }
+}
+
+.memory img {
+    width: 250px;
+    border-radius: 15px;
+    margin: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+</style>
+</head>
+
+<body>
+
+<!-- PASSWORD SCREEN -->
+<div id="passwordScreen">
+    <h2>Enter Our Special Password 💕</h2>
+    <input type="password" id="passwordInput" placeholder="Password">
+    <button onclick="checkPassword()">Enter</button>
+</div>
+
+<!-- MUSIC -->
+<audio id="bgMusic" loop>
+    <source src="love.mp3" type="audio/mpeg">
+</audio>
+
+<section>
+    <h1>To My Beautiful Love ❤️</h1>
+    <p>Welcome to something made only for you...</p>
+</section>
+
+<section>
+    <h1>My Message For You 💌</h1>
+    <p>
+My Dearest : GUl G!<br>
+ This is apka Rizwan. Naraz achi nahi lagti ho naraz na hoa karo. GUL tum meri<br>
+ zindagi ka best chapter ho. main tmhe udas nh deakh sakta. tum tu hansti hui achi<br>
+ lagti ho.Tum naraz hoti ho tu main tmhari batin bhut miss karta hon.You are very <br>
+ special. I always care about you Mera Bacha.❤️❤️❤️<br>
+ Apk liye aik line : <br>
+*تیری صورت سے ہے عالم میں بہاروں کو ثُبات*
+*تیری آنکھوں کے سوا دنیا میں رکھا کیا ہے ۔* 🫠<br><br>
+ IT IS ALWAYS YOU AND I VS PROBLEMS NOT "YOU vs I".<br>
+ Happy Valentine Day janam ❤️❤️❤️.
+ 
+ 
+    </p>
+</section>
+
+<section>
+    <h1>Our Memories 📸</h1>
+    <div class="memory">
+        <img src="memory1.jpg">
+        <p> Shehzadi ❤️</p>
+    </div>
+    <div class="memory">
+        <img src="memory2.jpg">
+        <p> US togather 💕</p>
+    </div>
+    
+   <div class="memory">
+        <img src="memory3.jpg">
+        <p>Apka Rizwan 💕</p>
+    </div>
+  
+<div class="memory">
+        <img src="memory4.jpg">
+        <p>Slaying Haseena 💕</p>
+    </div>
+
+
+<div class="memory">
+        <img src="memory5.jpg">
+        <p>Syombol of my Love. 💕</p>
+    </div>
+
+</section>
+
+<section>
+    <h1>Forever With You 💍</h1>
+    <p>No matter where life takes us, I will always stands with you.</p>
+</section>
+
+<script>
+function checkPassword() {
+    var password = document.getElementById("passwordInput").value;
+    if (password === "TmharaRizwan") {
+        document.getElementById("passwordScreen").style.display = "none";
+        document.getElementById("bgMusic").play();
+    } else {
+        alert("Wrong password 💔");
+    }
+}
+
+/* Floating Hearts Generator */
+setInterval(function() {
+    var heart = document.createElement("div");
+    heart.className = "heart";
+    heart.innerHTML = "❤️";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = (Math.random() * 20 + 10) + "px";
+    document.body.appendChild(heart);
+
+    setTimeout(function() {
+        heart.remove();
+    }, 8000);
+}, 500);
+</script>
+
+</body>
+</html>
